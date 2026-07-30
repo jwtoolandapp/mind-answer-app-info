@@ -1,0 +1,156 @@
+:root {
+  color-scheme: light dark;
+  --paper: #f4f1ea;
+  --paper-raised: #fbf9f4;
+  --ink: #202522;
+  --muted: #6f756f;
+  --line: #d9d6cd;
+  --accent: #516e6a;
+  --accent-soft: #e1e9e6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #111619;
+    --paper-raised: #171e21;
+    --ink: #edf0eb;
+    --muted: #a8b0aa;
+    --line: #313a3b;
+    --accent: #9dc7c0;
+    --accent-soft: #22302f;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family:
+    "Noto Serif KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui,
+    sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.75;
+  word-break: keep-all;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  width: min(720px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 72px 0 96px;
+}
+
+header {
+  margin-bottom: 48px;
+}
+
+h1,
+h2 {
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: clamp(2rem, 7vw, 3.1rem);
+  font-weight: 600;
+}
+
+h2 {
+  margin: 42px 0 12px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+p,
+li {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+ul {
+  margin: 12px 0;
+  padding-left: 22px;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+}
+
+.eyebrow,
+.updated {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+  letter-spacing: 0.08em;
+}
+
+.intro {
+  max-width: 38rem;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.links {
+  display: grid;
+  gap: 14px;
+  margin-top: 38px;
+}
+
+.link-card {
+  display: block;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper-raised);
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-card strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 1.08rem;
+}
+
+.link-card span {
+  color: var(--muted);
+}
+
+.notice {
+  margin: 28px 0;
+  padding: 18px 20px;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+}
+
+footer {
+  margin-top: 64px;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+nav {
+  margin-bottom: 36px;
+}
+
+@media (max-width: 520px) {
+  main {
+    width: min(100% - 32px, 720px);
+    padding-top: 48px;
+  }
+}
